@@ -1,2 +1,47 @@
 <!DOCTYPE html>
-<a>Hello World</a>
+<html lang="en">
+<head>
+    <div id="alert"></div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solas Blackjack</title>
+    <link rel="icon" type="image/png" href="./img/blackjack.png">
+    <meta name="description" content="Play blackjack with The Dealer.">
+    <meta property="og:title" content="Solas Blackjack - Unblonded">
+    <meta property="og:description" content="Play blackjack with The Dealer.">
+    <meta property="og:image" content="https://solas.top/img/blackjack.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="blackjack-game">
+        <div class="game-info">
+            <h1>Blackjack</h1>
+            <p id="chips">Chips: &</p>
+        </div>
+        <div class="betting" id="betDiv">
+            <label for="betAmount">Bet: </label>
+            <input type="number" id="betAmount" min="1" max="100" value="10">
+        </div>
+        <div class="game-table" id="table">
+            <div class="dealer">
+                <h2>Dealer's Hand</h2>
+                <div id="dealer-cards" class="cards"></div>
+                <p id="dealer-score"></p>
+            </div>
+            <div class="player">
+                <h2>Your Hand</h2>
+                <div id="player-cards" class="cards"></div>
+                <p id="player-score"></p>
+            </div>
+        </div>
+        <div class="game-controls">
+            <button id="hitButton" onclick="hit()">Hit</button>
+            <button id="standButton" onclick="stand()">Stand</button>
+            <button id="newGameButton" onclick="newGame()">New Game</button>
+        </div>
+        <div id="result"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
